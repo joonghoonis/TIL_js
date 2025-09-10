@@ -4,7 +4,7 @@ $sub-color:yellow;
 @mixin flex-align-center {
     display:flex;
     align-items: center;
-    justify-content: cneter;
+    justify-content: center;
 }
 @mixin after_design {
     content:''; display:block;
