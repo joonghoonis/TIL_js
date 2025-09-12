@@ -1,0 +1,11 @@
+@mixin bg{
+    background-size:cover;
+    background-position: center;
+    background-size: 100%;
+}
+@mixin flex-row {
+    display: flex;flex-flow: row nowrap;
+}
+@mixin flex-col {
+    display: flex;flex-flow:column nowrap;
+}
