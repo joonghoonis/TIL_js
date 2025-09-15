@@ -1,0 +1,20 @@
+@mixin imgsize {
+    width:24px;
+    height: 24px;
+}
+@mixin bg {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+@mixin flex-row {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+@mixin flwx-col {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
