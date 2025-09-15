@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>instagram</title>
+    <script src="./script/index.js" defer></script>
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/main.css">
+</head>
+<body>
+    <div id="wrap_card"> 
+        <header>
+            <a href="#"><span></span></a>
+            <a href="#"><span>bboori_
+            </span></a>
+            <a href="#"><img src="./images/more.png" alt=""></a>
+        </header>
+        <main>
+            <!-- 팝업 -->
+            <div id="popup">
+                <svg width="148" height="144" viewBox="0 0 148 144" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M90.625 143.686V126.902C102.906 123.354 112.799 116.531 120.305 106.433C127.81 96.3349 131.562 84.8724 131.562 72.0453C131.562 59.2182 127.81 47.7557 120.305 37.6578C112.799 27.5599 102.906 20.737 90.625 17.1891V0.404694C107.546 4.22553 121.328 12.7883 131.972 26.093C142.616 39.3977 147.938 54.7151 147.938 72.0453C147.938 89.3755 142.616 104.693 131.972 117.998C121.328 131.302 107.546 139.865 90.625 143.686ZM0.5625 96.8125V47.6875H33.3125L74.25 6.75001V137.75L33.3125 96.8125H0.5625ZM90.625 105V39.0906C97.0385 42.0927 102.053 46.5958 105.67 52.6C109.286 58.6042 111.094 65.1542 111.094 72.25C111.094 79.2094 109.286 85.657 105.67 91.593C102.053 97.5289 97.0385 101.998 90.625 105Z" />
+                    </svg>
+            </div>
+            <!-- 고정 -->
+            <div class="main_img"></div>
+            <div class="content">
+                <div class="btn_line">
+                    <div class="left_contents">
+                        <button type="button"><img src="./images/like_off.png" alt=""></button>
+                        <button type="button"><img src="./images/comment_off.png" alt=""></button>
+                        <button type="button"><img src="./images/paper_off.png" alt=""></button>
+                    </div>
+                    <div class="right_contents">
+                        <button type="button"><img src="./images/bookmark-white.png" alt=""></button>
+                    </div>
+                </div>
+                <div class="text_line">
+                    <p class="likes">100 likes</p>
+                    <p class="username">bboori_</p>
+                    <a href="#" class="comments">view all 20 commeents</a>
+                    <p class="days">3 Days Ago</p>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
