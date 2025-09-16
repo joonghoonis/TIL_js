@@ -73,3 +73,12 @@ function plusFunc() {
 }
 function minusFunc(){ inputNum.value = --count
 }
+// 로그인 조건문
+// 아이디(미입력) 비밀번호(입력) 로그인 클릭 시 - 아이디 입력 경고 메세지 출력
+// 아이디(입력) 비밀번호(미입력) 로그인 클릭 시 - 아이디 입력 경고 메세지 출력
+// 아이디(입력) 비밀번호(입력) 로그인 클릭 시 - 맞는 정보 기준) index.html이동
+// 아이디(입력) 비밀번호(입력) 로그인 클릭 시 - 틀린 정보 기준) 정보 오류 메세지 출력
+const userId = documenl.querySelector('#user_id')
+const userPw =  documenl.querySelector('#user_pw')
+const loginBtn =documenl.querySelector('#login_btn')
+const loginErrorMsg = documenl.querySelector('.error')
