@@ -9,6 +9,7 @@
     <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/128/9385/9385258.png" type="image/x-icon">
     <link rel="stylesheet" href="./styles/reset.css">
     <link rel="stylesheet" href="./styles/main.css">
+    <script src="./script/data.js"></script>
     <script src="./script/index.js" defer></script>
 
 </head>
@@ -66,8 +67,8 @@
                             </button>
                         </div>
                     </div>
-                    <div class="review">
-                        <div class="score">
+                    <div class="review review_link">
+                        <button type="button" class="score">
                             <svg width="16" height="16" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <mask id="mask0_13_39" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="25" height="25">
                                 <rect x="0.233337" y="0.265953" width="24" height="24" fill="#D9D9D9"/>
@@ -108,15 +109,15 @@
                                 <path d="M12.2334 17.5409L8.08335 20.0409C7.90002 20.1576 7.70835 20.2076 7.50835 20.1909C7.30835 20.1743 7.13335 20.1076 6.98335 19.9909C6.83335 19.8743 6.71669 19.7284 6.63335 19.5534C6.55002 19.3784 6.53335 19.1826 6.58335 18.9659L7.68335 14.2409L4.00835 11.0659C3.84169 10.9159 3.73752 10.7451 3.69585 10.5534C3.65419 10.3618 3.66669 10.1743 3.73335 9.99095C3.80002 9.80762 3.90002 9.65762 4.03335 9.54095C4.16669 9.42428 4.35002 9.34928 4.58335 9.31595L9.43335 8.89095L11.3084 4.44095C11.3917 4.24095 11.5209 4.09095 11.6959 3.99095C11.8709 3.89095 12.05 3.84095 12.2334 3.84095C12.4167 3.84095 12.5959 3.89095 12.7709 3.99095C12.9459 4.09095 13.075 4.24095 13.1584 4.44095L15.0334 8.89095L19.8834 9.31595C20.1167 9.34928 20.3 9.42428 20.4334 9.54095C20.5667 9.65762 20.6667 9.80762 20.7334 9.99095C20.8 10.1743 20.8125 10.3618 20.7709 10.5534C20.7292 10.7451 20.625 10.9159 20.4584 11.0659L16.7834 14.2409L17.8834 18.9659C17.9334 19.1826 17.9167 19.3784 17.8334 19.5534C17.75 19.7284 17.6334 19.8743 17.4834 19.9909C17.3334 20.1076 17.1584 20.1743 16.9584 20.1909C16.7584 20.2076 16.5667 20.1576 16.3834 20.0409L12.2334 17.5409Z"/>
                                 </g>
                                 </svg>
-                        </div>
-                        <span>169개 리뷰</span>
+                        </button>
+                        <button type="button" class="review_number">169개 리뷰</button>
                     </div>
                     <div class="price_wrap">
                         <div class="sale_original_price">
                             <span class="sale">28%</span>
                             <del class="original">55,900</del>
                             <span class="price_info">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <svg class="info_icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <mask id="mask0_13_33" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
                                     <rect width="24" height="24" fill="#D9D9D9"/>
                                     </mask>
@@ -157,9 +158,9 @@
                         <div class="product_opt">
                             <select name="color_select" id="color_select">
                                 <option value="">색상 </option>
-                                <option value="black">블랙(39,900원)</option>
+                                <!-- <option value="black">블랙(39,900원)</option>
                                 <option value="raspbarry">라즈베리(39,900원)</option>
-                                <option value="amond" disabled>아몬드(39,900원)품절</option>
+                                <option value="amond" disabled>아몬드(39,900원)품절</option> -->
                             </select>
                             <select name="size_select" id="size_select">
                                 <option value="">사이즈</option>    
@@ -196,6 +197,15 @@
                     </form>
                 </div>
             </div>
+            <div class="sticky_menu" style="background-color: #f5f5f5; padding:20px;display:flex;gap:10px;position:sticky;top:100px;">
+                <a href="#" class="product_link">상품정보</a> <!-- 클릭 시 상품정보 위치 이동 -->
+                <a href="#" class="review_link">리뷰</a><!-- 클릭 시 리뷰 위치 이동 -->
+                <a href="#">문의</a>
+                <a href="#">배송/환불</a>
+                <a href="#">추천</a>
+            </div>
+            <div class="product_info" style="height:1000px; background:aqua;">상품정보</div>
+            <div class="review_wrap" style="height:1000px; background: lime;">고객리뷰</div>
         </main>
     </div>
 </body>

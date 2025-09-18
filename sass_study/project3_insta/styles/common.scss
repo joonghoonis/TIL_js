@@ -12,7 +12,7 @@
     flex-flow: row nowrap;
     align-items: center;
 }
-@mixin flwx-col {
+@mixin flex-col {
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;

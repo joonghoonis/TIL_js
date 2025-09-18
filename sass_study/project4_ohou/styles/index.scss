@@ -1,4 +1,4 @@
-@use './common.scss'as *;
+@use './common.scss' as *;
 #wrap{
     header {
         border-bottom: 1px solid $color-gray-light-lv3;
@@ -8,7 +8,6 @@
             padding:20px 60px;
             a{
                 font-size: $font-size-l;
-                font-weight:$font-weight-semibold;
                 color:$color-gray-dark;
                 &:hover{
                     color:$color-point
@@ -66,7 +65,7 @@
                     @include flex-row; justify-content: space-between;
                     align-items: center;
                     h1 {color:$color-gray-dark;
-                        font-size:$font-size-l;letter-spacing: -2%;
+                        font-size:$font-size-l;letter-spacing: -0.2px;
                     }
                     .right_icon {
                         margin-left:80px;
@@ -96,7 +95,7 @@
                         @include flex-row;
                         svg {fill:$color-point;}
                     }
-                    span {
+                    .review_number {
                         color:$color-point;
                         font-weight:$font-weight-medium;
                         font-size: $font-size-sm;
@@ -232,7 +231,7 @@
                         .quantity_price {
                             @include flex-row;
                             justify-content: space-between;
-                            align-items: end;
+                            align-items: end;   
                             .quantity_btn {
                                 @include flex-row; align-items: center; justify-content: center;
                                 width:70px;
@@ -284,7 +283,7 @@
                         #buy_btn {
                             width:49%;
                             border-radius: 5px;
-                            padding: 15p    x;
+                            padding: 15px;
                             background-color: $color-point;
                         }
                     }

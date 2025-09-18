@@ -1,18 +1,456 @@
-/* Error: Undefined variable.
- *    ,
- * 10 |                 font-size: $font-size-l;font-weight:$font-wieght-semibold;
- *    |                                                     ^^^^^^^^^^^^^^^^^^^^^
- *    '
- *   styles\index.scss 10:53  @use
- *   styles\main.scss 3:1     root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Undefined variable.\a    \2577 \a 10 \2502                  font-size: $font-size-l;font-weight:$font-wieght-semibold;\d\a    \2502                                                      ^^^^^^^^^^^^^^^^^^^^^\a    \2575 \a   styles\\index.scss 10:53  @use\a   styles\\main.scss 3:1     root stylesheet";
+#wrap header {
+  border-bottom: 1px solid #dadce0;
+  gap: 16px;
 }
+#wrap header .nav {
+  margin: 0 200px;
+  padding: 20px 60px;
+}
+#wrap header .nav a {
+  font-size: 1.375rem;
+  color: #292929;
+}
+#wrap header .nav a:hover {
+  color: #0aa5ff;
+}
+#wrap main {
+  margin: 0 auto;
+  width: max-content;
+}
+#wrap main .path {
+  padding: 10px 0 20px 0;
+}
+#wrap main .path a {
+  position: relative;
+  padding-right: 12px;
+  color: #757575;
+  font-size: 0.875rem;
+}
+#wrap main .path a::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  content: ">";
+  left: auto;
+  top: 5px;
+  font-size: 0.688rem;
+}
+#wrap main .path a:last-child::after {
+  display: none;
+}
+#wrap main .container {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 18px;
+}
+#wrap main .container .overview_img {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 10px;
+}
+#wrap main .container .overview_img .thumnail_img {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 10px;
+}
+#wrap main .container .overview_img .thumnail_img a:nth-child(1):hover img { /* animation:imgscale 0.5s; */ }
+#wrap main .container .overview_img .thumnail_img a:nth-child(1) {
+  width: 56px;
+  height: 56px;
+  overflow: hidden;
+}
+#wrap main .container .overview_img .thumnail_img a:nth-child(1) img {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  overflow: hidden;
+}
+#wrap main .container .overview_img .thumnail_img a:nth-child(2) {
+  width: 56px;
+  height: 56px;
+  overflow: hidden;
+}
+#wrap main .container .overview_img .thumnail_img a:nth-child(2) img {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+}
+#wrap main .container .overview_img .overview {
+  width: 558px;
+  height: 558px;
+}
+#wrap main .container .overview_img .overview img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+#wrap main .container .contents {
+  display: flex;
+  flex-flow: column nowrap;
+}
+#wrap main .container .contents .brand {
+  font-size: 0.875rem;
+  color: #757575;
+  margin-bottom: 15px;
+}
+#wrap main .container .contents .product_info {
+  margin-bottom: 20px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+#wrap main .container .contents .product_info h1 {
+  color: #292929;
+  font-size: 1.375rem;
+  letter-spacing: -0.2px;
+}
+#wrap main .container .contents .product_info .right_icon {
+  margin-left: 80px;
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 10px;
+}
+#wrap main .container .contents .product_info .right_icon .scrap:hover {
+  color: #dadce0;
+}
+#wrap main .container .contents .product_info .right_icon .scrap:hover svg {
+  stroke: #dadce0;
+}
+#wrap main .container .contents .product_info .right_icon .scrap {
+  display: flex;
+  flex-flow: column nowrap;
+}
+#wrap main .container .contents .product_info .right_icon .scrap svg {
+  stroke: #828c94;
+  stroke-width: 1.5px;
+}
+#wrap main .container .contents .product_info .right_icon .scrap span {
+  font-size: 0.688rem;
+}
+#wrap main .container .contents .product_info .right_icon .share svg {
+  stroke: #828c94;
+  stroke-width: 1.5px;
+}
+#wrap main .container .contents .product_info .right_icon .share:hover svg {
+  stroke: #dadce0;
+}
+#wrap main .container .contents .review {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  gap: 7px;
+}
+#wrap main .container .contents .review .score {
+  display: flex;
+  flex-flow: row nowrap;
+}
+#wrap main .container .contents .review .score svg {
+  fill: #0aa5ff;
+}
+#wrap main .container .contents .review .review_number {
+  color: #0aa5ff;
+  font-weight: 500;
+  font-size: 0.813rem;
+}
+#wrap main .container .contents .review {
+  margin-bottom: 5px;
+}
+#wrap main .container .contents .price_wrap .sale_original_price {
+  margin-bottom: 5px;
+}
+#wrap main .container .contents .price_wrap .sale_original_price .sale {
+  color: #828c94;
+}
+#wrap main .container .contents .price_wrap .sale_original_price .original {
+  color: #bdbdbd;
+}
+#wrap main .container .contents .price_wrap .sale_original_price .price_info {
+  position: relative;
+}
+#wrap main .container .contents .price_wrap .sale_original_price .price_info svg {
+  display: inline-block;
+  stroke: #828c94;
+  stroke-width: 1.5px;
+  stroke-width: 2px;
+  width: 16px;
+  height: 16px;
+}
+#wrap main .container .contents .price_wrap .sale_original_price .price_info svg:hover + .info {
+  display: inline-block;
+}
+#wrap main .container .contents .price_wrap .sale_original_price .price_info .info {
+  display: none;
+  padding: 14px 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  line-height: 140%;
+  letter-spacing: -1px;
+  background-color: #fff;
+  width: 336px;
+  height: max-content;
+  position: absolute;
+  left: -150px;
+  top: 18px;
+  border-radius: 5px;
+  font-size: 0.875rem;
+}
+#wrap main .container .contents .price_wrap .total_price {
+  margin-bottom: 20px;
+}
+#wrap main .container .contents .price_wrap .total_price em {
+  font-size: 2rem;
+  font-weight: 700;
+}
+#wrap main .container .contents .price_wrap .total_price span:first-child {
+  font-size: 1.375rem;
+}
+#wrap main .container .contents .price_wrap .total_price .today_img {
+  display: inline-block;
+  width: 60px;
+  height: 15px;
+}
+#wrap main .container .contents .price_wrap .total_price .today_img img {
+  width: 100%;
+  height: 100%;
+}
+#wrap main .container .contents .benefit_ship {
+  margin-bottom: 20px;
+  display: grid;
+  grid-template-columns: 45px 1fr;
+  grid-template-areas: "title1 cont1" "title2 cont2" ". cont3" ". cont4" ". cont5" ". cont6";
+}
+#wrap main .container .contents .benefit_ship dt {
+  color: #828c94;
+  font-size: 0.875rem;
+}
+#wrap main .container .contents .benefit_ship dt:nth-of-type(1) {
+  grid-area: title1;
+  padding: 15px 0;
+}
+#wrap main .container .contents .benefit_ship dt:nth-of-type(2) {
+  grid-area: title2;
+}
+#wrap main .container .contents .benefit_ship dd {
+  color: #292929;
+  font-size: 0.875rem;
+}
+#wrap main .container .contents .benefit_ship dd em {
+  font-weight: 700;
+}
+#wrap main .container .contents .benefit_ship dd:nth-of-type(1) {
+  grid-area: cont1;
+  padding-top: 15px;
+}
+#wrap main .container .contents .benefit_ship dd:nth-of-type(2) {
+  grid-area: cont2;
+  margin-bottom: 10px;
+}
+#wrap main .container .contents .benefit_ship dd:nth-of-type(3) {
+  grid-area: cont3;
+  margin-bottom: 10px;
+}
+#wrap main .container .contents .benefit_ship dd:nth-of-type(3) .point {
+  color: #0aa5ff;
+  font-weight: 500;
+}
+#wrap main .container .contents .benefit_ship dd:nth-of-type(3) {
+  position: relative;
+}
+#wrap main .container .contents .benefit_ship dd:nth-of-type(3) svg {
+  display: inline-block;
+  stroke: #828c94;
+  stroke-width: 1.5px;
+  stroke-width: 2px;
+  width: 16px;
+  height: 16px;
+}
+#wrap main .container .contents .benefit_ship dd:nth-of-type(3) svg:hover + .info {
+  display: inline-block;
+}
+#wrap main .container .contents .benefit_ship dd:nth-of-type(3) .info {
+  display: none;
+  padding: 14px 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  line-height: 140%;
+  letter-spacing: -1px;
+  background-color: #fff;
+  width: 336px;
+  height: max-content;
+  position: absolute;
+  left: -150px;
+  top: 18px;
+  border-radius: 5px;
+  font-size: 0.875rem;
+  width: 260px;
+  left: 50px;
+}
+#wrap main .container .contents .benefit_ship dd:nth-of-type(4) {
+  grid-area: cont4;
+  margin-bottom: 6px;
+}
+#wrap main .container .contents .benefit_ship dd:nth-of-type(5) {
+  grid-area: cont5;
+  font-size: 0.813rem;
+  color: #757575;
+  margin-bottom: 10px;
+}
+#wrap main .container .contents .benefit_ship dd:nth-of-type(6) {
+  grid-area: cont6;
+  padding-bottom: 15px;
+}
+#wrap main .container .contents .benefit_ship .ship_info {
+  display: inline-block;
+  width: max-content;
+  border-radius: 7px;
+  background-color: #f5f5f5;
+  padding: 12px 20px;
+}
+#wrap main .container .contents form .product_opt {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 10px;
+}
+#wrap main .container .contents form .product_opt select:hover {
+  background-color: #f9f9f9;
+}
+#wrap main .container .contents form .product_opt select {
+  background-color: #fff;
+  color: #292929;
+  border-radius: 4px;
+  padding: 10px 17px;
+  background-image: url(https://cdn-icons-png.flaticon.com/128/25/25243.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-position: 460px 13px;
+  background-size: 10px;
+}
+#wrap main .container .contents form .product_opt #color_select {
+  border: 1px solid #0aa5ff;
+}
+#wrap main .container .contents form .product_opt #size_select {
+  margin-bottom: 10px;
+  border: 1px solid #dadce0;
+}
+#wrap main .container .contents form .order_list {
+  margin-bottom: 14px;
+  padding: 12px;
+  font-size: 0.875rem;
+  color: #292929;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+}
+#wrap main .container .contents form .order_list .info {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+#wrap main .container .contents form .order_list .info .close_btn {
+  width: 10px;
+  height: 10px;
+}
+#wrap main .container .contents form .order_list .info .close_btn img {
+  width: 100%;
+  height: 100%;
+}
+#wrap main .container .contents form .order_list .quantity_price {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: end;
+}
+#wrap main .container .contents form .order_list .quantity_price .quantity_btn {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+  gap: 10px;
+  padding: 3px;
+  background-color: #fff;
+  border: 1px solid #bdbdbd;
+}
+#wrap main .container .contents form .order_list .quantity_price .quantity_btn .minus {
+  width: 14px;
+  height: 14px;
+}
+#wrap main .container .contents form .order_list .quantity_price .quantity_btn .minus img {
+  width: 100%;
+  height: 100%;
+}
+#wrap main .container .contents form .order_list .quantity_price .quantity_btn .plus {
+  width: 14px;
+  height: 14px;
+}
+#wrap main .container .contents form .order_list .quantity_price .quantity_btn .plus img {
+  width: 100%;
+  height: 100%;
+}
+#wrap main .container .contents form .order_list .quantity_price .quantity_btn #order_num {
+  width: 10px;
+  height: max-content;
+}
+#wrap main .container .contents form .order_list .quantity_price .price {
+  font-weight: 500;
+  color: #292929;
+}
+#wrap main .container .contents form .order_price {
+  border-top: 1px solid #f5f5f5;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  padding: 16px 0;
+}
+#wrap main .container .contents form .order_price h2 {
+  color: #292929;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+#wrap main .container .contents form .order_price .price {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #292929;
+}
+#wrap main .container .contents form .order_price .price em {
+  font-weight: 700;
+}
+#wrap main .container .contents form .order_btn {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+#wrap main .container .contents form .order_btn #cart_btn {
+  width: 49%;
+  padding: 15px;
+  border: 1px solid #0aa5ff;
+  border-radius: 5px;
+}
+#wrap main .container .contents form .order_btn #buy_btn {
+  width: 49%;
+  border-radius: 5px;
+  padding: 15px;
+  background-color: #0aa5ff;
+}
+@keyframes imgscale {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.2);
+  }
+}
+@media screen and (max-width: 1000px) {
+  #wrap main .path {
+    padding: 14px 80px;
+  }
+  #wrap main .container {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    gap: 20px;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
