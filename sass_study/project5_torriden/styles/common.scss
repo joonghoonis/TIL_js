@@ -1,0 +1,56 @@
+// common.scss
+$font-size-12:0.75rem;
+$font-size-14:0.875rem;
+$font-size-17:1.063rem;
+$font-size-19:1.188rem;
+$font-size-23:1.438rem;
+$font-size-30:1.875rem;
+$font-weight-semibold:600;
+$color-black:#000;
+$color-white:#fff;
+$color-light-gray-lv1:#636363;
+$color-light-gray-lv2:#6D7175;
+$color-point1:#2E68BF;
+$color-point2:#35A8F1;
+@mixin flex-row {
+    display: flex; flex-flow:row nowrap;
+}
+@mixin flex-col {
+    display: flex; flex-flow:column nowrap;
+}
+@mixin flex-center {
+    justify-content: center;
+    align-items: center;
+}
+@mixin parcents100 {
+    width:100%;
+    height: 100%;
+}
+@mixin state {
+    padding:2px 8px;
+    color:$color-white;
+    font-size:$font-size-14;
+    border-radius: 3px;
+}
+@mixin opt_header {
+    padding: 16px 24px;
+    border: 1px solid $color-light-gray-lv2;
+    border-radius: 20px 20px 0 0;
+} 
+@mixin opt_main {
+    padding: 16px 24px;
+    border-bottom : 1px solid $color-light-gray-lv2;
+    border-left : 1px solid $color-light-gray-lv2;
+    border-right : 1px solid $color-light-gray-lv2;
+    border-radius: 0 0 20px 20px;
+}
+@mixin cart_wish_btn {
+    padding:16px 28px;
+    border-radius: 25px;
+    text-align: center;
+    width:100%
+}
+@mixin desc_dt {
+    font-size:$font-size-19;
+    font-weight: $font-weight-semibold;
+}

@@ -1,0 +1,185 @@
+@use './common.scss'as *;
+
+#wrap {
+    header {
+        @include flex-row;
+        @include flex-center; justify-content: start;
+        padding: 12px 40px;
+        margin: 0 80px;
+        .logo {
+            a {}
+        }
+        nav {
+            padding-left:50px;
+            ul {
+                @include flex-row;
+                gap: 25px;
+                li {}
+            }
+        }
+    }
+    main {
+        width:100vw;
+        .main_view{
+            max-width:1680px;
+            @include flex-row;
+            gap: 50px;
+            margin: 0 auto ;
+            padding: 50px 40px;
+            .left_contents {
+                width:860px;
+                @include flex-col;
+                gap: 30px;
+                .overview {
+                    .overview_img{
+                        display: block;
+                        width: 860px; height:860px;
+                        img {@include parcents100;}
+                    }
+                    .left_arrow_btn {}
+                    .right_arrow_btn {}
+                }
+                .thumnail {
+                    @include flex-row;
+                    gap:10px; 
+                    .thum_img {
+                        width:100px;height:100px;
+                        img {@include parcents100;}
+                    }
+                }
+            }
+            .right_contents {
+                width:calc(  100% - 860px);
+                /* @include flex-col; */
+                .product_state {
+                    margin-bottom: 12px;
+                    .state_1 {
+                        @include state;
+                        background-color: $color-point1;
+                    }
+                    .state_2{
+                        @include state;
+                        background-color: $color-point2;
+                    }
+                }
+                .product_name_desc {
+                    margin-bottom: 10px;
+                    .product_name {
+                        margin-bottom: 10px;
+                        font-size:$font-size-30;
+                        font-weight: $font-weight-semibold;
+                    }
+                    .product_desc {
+                        font-size:$font-size-17;
+                        color:$color-light-gray-lv1;
+                    }
+                }
+                .product_price_capacity {
+                    margin-bottom: 30px;
+                    @include flex-row;
+                    align-items: center; gap:10px;
+                    .product_price {
+                        font-size:$font-size-23;
+                        font-weight: $font-weight-semibold;
+                    }
+                    .product_capacity {
+                        font-size: $font-size-14;
+                    }
+                }
+                .product_quantity {
+                    >p {font-weight: $font-weight-semibold;padding-bottom: 8px;}
+                    .quantity_btn {
+                        @include flex-row;
+                        .minus {}
+                        #quantity_num {
+                            width:44px;height:31px
+                        }
+                        .plus {}
+                    }
+                }
+                .product_option {
+                    margin-bottom: 10px;
+                    .product_option_header {
+                        @include opt_header;
+                        @include flex-row; justify-content: space-between;
+                        .product_option {}
+                        .price_usd {color:$color-light-gray-lv2;}
+                    }
+                    .product_option_main {
+                        @include opt_main;
+                        .sub_price{
+                            margin-bottom:20px;
+                            @include flex-row; justify-content: space-between;
+                            .subscribe {color:$color-light-gray-lv2;}
+                            .price_usd {color:$color-light-gray-lv2;}
+                        }
+                        .product_option {
+                            @include flex-col;
+                            gap: 8px;
+                        }
+                    }
+                }
+                .subscribe_description {margin-bottom: 30px;}
+                .cart_wishlist_btn {
+                    margin-bottom: 30px;
+                    .cart {
+                        .cart_btn {
+                            margin-bottom: 10px;
+                            background-color: $color-black;
+                            color:$color-white;
+                            @include cart_wish_btn;
+                        }
+                    }
+                    .wishlist {
+                        .wishlist_btn{
+                            @include cart_wish_btn;
+                            background-color: $color-white;
+                        }
+                    }
+                }
+                .product_description_list {
+                    width:100%;
+                    .desc_summary {
+                        border-top: 1px solid $color-light-gray-lv2;
+                        dt {
+                            .desc_btn {
+                                padding:16px;
+                                span{@include desc_dt;}
+                            }
+                        }
+                        dd {display:none;}
+                    }
+                    .desc_benefits {
+                        border-top: 1px solid $color-light-gray-lv2;
+                        dt {
+                            .desc_btn {
+                                padding:16px;
+                                span{@include desc_dt;}
+                            }
+                        }
+                    }
+                    .desc_ingredients {
+                        border-top: 1px solid $color-light-gray-lv2;
+                        dt {
+                            .desc_btn {
+                                padding:16px;
+                                span{@include desc_dt;}
+                            }
+                        }
+                    }
+                    .desc_how {
+                        border-top: 1px solid $color-light-gray-lv2;
+                        border-bottom: 1px solid $color-light-gray-lv2;
+                        dt {
+                            .desc_btn {
+                                padding:16px;
+                                span{@include desc_dt;}
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    footer {}
+}
