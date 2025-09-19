@@ -186,4 +186,6 @@ function orderListClose() {
 /* closeBtn.addEventListener('click', function(){
     this.parentNode.style.display = 'none';
 }) */
-
+// 9. 주문목록 + 클릭 시 재고수량까지 주문수량+ 주문금액 표시
+// 필요목록 : +버튼, 재고수량, 주문수량, 주문금액, 증가 숫자 데이터
+// 10. 주문목록 - 클릭 시 주문수량+ 주문금액 감소 (수량이 1이라면 경고창 출력)
