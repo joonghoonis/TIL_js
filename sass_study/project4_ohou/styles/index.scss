@@ -4,6 +4,7 @@
         border-bottom: 1px solid $color-gray-light-lv3;
         gap: 16px;        
         .nav {
+            @include flex-row;
             margin:0 200px;
             padding:20px 60px;
             a{
