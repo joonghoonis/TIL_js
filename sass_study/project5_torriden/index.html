@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="shortcut icon" href="./images/logo_favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/main.css">
+    <script src="./script/index.js" defer></script>
+</head>
+<body>
+    <div id="wrap">
+        <header>
+            <div class="logo">
+                <a href="#"><img src="./images/Logo.png" alt=""></a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">SHOP</a></li>
+                    <li><a href="#">NEW</a></li>
+                    <li><a href="#">BEST SELLERS</a></li>
+                    <li><a href="#">SKINCARE QUIZ</a></li>
+                    <li><a href="#">MEMBERSHIP</a></li>
+                    <li><a href="#">COLLABORATION INQUIRY</a></li>
+                    <li><a href="#">ABOUT TORRIDEN</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <div class="main_view">
+                <div class="left_contents">
+                    <div class="overview">
+                        <span class="overview_img"><img src="./images/thum_1.jpg" alt=""></span>
+                        <button type="button" class="left_arrow_btn">
+                            <svg width="9" height="16" viewBox="0 0 9 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7.84645 16L0 8L7.84645 0L9 1.17612L2.3069 8L9 14.8239L7.84645 16Z" fill="#1C1B1F"/>
+                                </svg>                                
+                        </button>
+                        <button type="button" class="right_arrow_btn">
+                            <svg width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1.65355 -1.57593e-07L9.5 8L1.65355 16L0.499999 14.8239L7.19311 8L0.5 1.17612L1.65355 -1.57593e-07Z" fill="#1C1B1F"/>
+                                </svg>
+                        </button>
+                    </div>
+                    <div class="thumnail">
+                        <button type="button" class="thum_img"><img src="./images/thum_1.jpg" alt=""></button>
+                        <button type="button" class="thum_img"><img src="./images/thum_2.jpg" alt=""></button>
+                        <button type="button" class="thum_img"><img src="./images/thum_3.jpg" alt=""></button>
+                        <button type="button" class="thum_img"><img src="./images/thum_4.jpg" alt=""></button>
+                        <button type="button" class="thum_img"><img src="./images/thum_5.jpg" alt=""></button>
+                        <button type="button" class="thum_img"><img src="./images/thum_6.jpg" alt=""></button>
+                        <button type="button" class="thum_img"><img src="./images/thum_7.jpg" alt=""></button>
+                    </div>
+                </div>
+                <div class="right_contents">
+                    <div class="product_state">
+                        <span class="state_1">NEW</span>
+                        <span class="state_2">HYDRATING</span>
+                    </div>
+                    <div class="product_name_desc">
+                            <h1 class="product_name">DIVE IN Cleansing Oil</h1>
+                            <p class="product_desc">Non-Stripping Deep Cleanser</p>
+                    </div>
+                    <div class="product_price_capacity">
+                        <h2 class="product_price">$25.00</h2>
+                        <p class="product_capacity">200 ml / 6.76 fl. oz.</p>
+                    </div>
+                    <div class="product_quantity">
+                        <p>Quantity</p>
+                        <div class="quantity_btn">
+                            <button type="button" class="minus">
+                                <svg width="26" height="27" viewBox="0 0 26 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="26" height="26" transform="translate(0 0.5)" fill="black"/>
+                                    <path d="M7 14.5V12.5H19V14.5H7Z" fill="white"/>
+                                    </svg>
+                            </button>
+                            <input type="number" name="quantity_num" id="quantity_num">
+                            <button type="button" class="plus">
+                                <svg width="26" height="27" viewBox="0 0 26 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="26" height="26" transform="translate(0 0.5)" fill="black"/>
+                                    <path d="M11.8571 14.6429H5V12.3571H11.8571V5.5H14.1429V12.3571H21V14.6429H14.1429V21.5H11.8571V14.6429Z" fill="white"/>
+                                    </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product_option">
+                        <div class="product_option_header">
+                            <div class="product_option">
+                                <input type="radio" name="option_select" id="select_main" checked>
+                                <label for="select_main">One-time purchase</label>
+                            </div>
+                            <p class="price_usd">$25.00 USD</p>
+                        </div>
+                        <div class="product_option_main">
+                            <div class="sub_price">
+                                <p class="subscribe">Subscribe and save</p>
+                                <p class="price_usd">$22.50 USD</p>
+                            </div>
+                            <div class="product_option">
+                                <div class="option_select_2">
+                                    <input type="radio" name="option_select" id="select_2" checked>
+                                    <label for="select_2">Deliver every month, 10% off</label>
+                                </div>
+                                <div class="option_select_3">
+                                    <input type="radio" name="option_select" id="select_3" checked>
+                                    <label for="select_3">Deliver every 2 months, 7% off</label>
+                                </div>
+                                <div class="option_select_4">
+                                    <input type="radio" name="option_select" id="select_4" checked>
+                                    <label for="select_4">Deliver every 3 months, 5% off</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="subscribe_description">
+                        Auto-renews, skip or cancel anytime. View subscription policy
+                    </div>
+                    <div class="cart_wishlist_btn">
+                        <div class="cart">
+                            <button type="button" class="cart_btn">Add to cart</button>
+                        </div>
+                        <div class="wishlist">
+                            <button type="button" class="wishlist_btn">
+                                <svg width="19" height="16" viewBox="0 0 19 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9.50005 15.75L8.95005 15.25C7.33338 13.7667 5.99588 12.5 4.93755 11.45C3.87922 10.4 3.04588 9.47918 2.43755 8.68751C1.82922 7.89585 1.40422 7.18335 1.16255 6.55001C0.920882 5.91668 0.800049 5.28335 0.800049 4.65001C0.800049 3.46668 1.20422 2.47085 2.01255 1.66251C2.82088 0.854179 3.81672 0.450012 5.00005 0.450012C5.88338 0.450012 6.70838 0.687512 7.47505 1.16251C8.24172 1.63751 8.91672 2.33335 9.50005 3.25001C10.0834 2.33335 10.7584 1.63751 11.525 1.16251C12.2917 0.687512 13.1167 0.450012 14 0.450012C15.1834 0.450012 16.1792 0.854179 16.9875 1.66251C17.7959 2.47085 18.2 3.46668 18.2 4.65001C18.2 5.28335 18.0792 5.91668 17.8375 6.55001C17.5959 7.18335 17.1709 7.89585 16.5625 8.68751C15.9542 9.47918 15.125 10.4 14.075 11.45C13.025 12.5 11.6834 13.7667 10.05 15.25L9.50005 15.75ZM9.50005 14.8C11.1 13.35 12.4167 12.1083 13.45 11.075C14.4834 10.0417 15.3 9.14585 15.9 8.38751C16.5 7.62918 16.9167 6.95835 17.15 6.37501C17.3834 5.79168 17.5 5.21668 17.5 4.65001C17.5 3.65001 17.1667 2.81668 16.5 2.15001C15.8334 1.48335 15 1.15001 14 1.15001C13.2 1.15001 12.4625 1.37918 11.7875 1.83751C11.1125 2.29585 10.4667 3.01668 9.85005 4.00001H9.15005C8.51672 3.00001 7.86672 2.27501 7.20005 1.82501C6.53338 1.37501 5.80005 1.15001 5.00005 1.15001C4.01672 1.15001 3.18755 1.48335 2.51255 2.15001C1.83755 2.81668 1.50005 3.65001 1.50005 4.65001C1.50005 5.21668 1.61672 5.79168 1.85005 6.37501C2.08338 6.95835 2.50005 7.62918 3.10005 8.38751C3.70005 9.14585 4.51672 10.0375 5.55005 11.0625C6.58338 12.0875 7.90005 13.3333 9.50005 14.8Z" fill="#1C1B1F"/>
+                                </svg>
+                                Add to Wishlist
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product_description_list">
+                        <dl class="desc_summary">
+                            <dt>
+                                <button type="button" class="desc_btn">
+                                    <span>SUMMARY</span><svg width="20" height="12" viewBox="0 0 20 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M19.6537 2L9.99994 11.6537L0.346191 2L1.76544 0.580748L9.99994 8.8155L18.2344 0.580747L19.6537 2Z" fill="#1C1B1F"/>
+                                    </svg>
+                                </button>
+                            </dt>
+                            <dd>A moisture cleansing oil with 8D multi low-molecular hyaluronic acid melts away makeup, pore cloggers and hydrates without leaving an oily residue.</dd>
+                        </dl>
+                        <dl class="desc_benefits">
+                            <dt>
+                                <button type="button" class="desc_btn">
+                                    <span>BENEFITS</span>
+                                    <svg width="20" height="12" viewBox="0 0 20 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M19.6537 2L9.99994 11.6537L0.346191 2L1.76544 0.580748L9.99994 8.8155L18.2344 0.580747L19.6537 2Z" fill="#1C1B1F"/>
+                                    </svg>
+                                </button>
+                            </dt>
+                            <dd></dd>
+                        </dl>
+                        <dl class="desc_ingredients">
+                            <dt>
+                                <button type="button" class="desc_btn">
+                                    <span>INGREDIENTS</span>
+                                    <svg width="20" height="12" viewBox="0 0 20 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M19.6537 2L9.99994 11.6537L0.346191 2L1.76544 0.580748L9.99994 8.8155L18.2344 0.580747L19.6537 2Z" fill="#1C1B1F"/>
+                                    </svg>
+                                </button>
+                            </dt>
+                            <dd></dd>
+                        </dl>
+                        <dl class="desc_how">
+                            <dt>
+                                <button type="button" class="desc_btn">
+                                    <span>HOW TO USE</span>
+                                    <svg width="20" height="12" viewBox="0 0 20 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M19.6537 2L9.99994 11.6537L0.346191 2L1.76544 0.580748L9.99994 8.8155L18.2344 0.580747L19.6537 2Z" fill="#1C1B1F"/>
+                                    </svg>
+                                </button>
+                            </dt>
+                            <dd></dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer></footer>
+    </div>
+</body>
+</html>

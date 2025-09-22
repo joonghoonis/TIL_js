@@ -4,9 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>다이어트 체중계</title>
-    <link rel="stylesheet" href="./styles/reset.css">k
+    <link rel="stylesheet" href="./styles/reset.css">   
 </head>
 <body>
-    
+    <div id="wrap">
+        <h1>다이어트 체중계</h1>
+        <div id="main">
+            <div class="weight_dial">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="clac">
+                <button type="button" class="gender male">남자</button>
+                <button type="button" class="gender female">여자</button>
+                <div class="height">
+                    <span>키 :</span>
+                    <input type="number" name="height_num" id="height_num" placeholder="키를 입력해주세요">
+                </div>
+                <div class="weight">
+                    <span>몸무게 :</span>
+                    <input type="number" name="weight_num" id="height_num" placeholder="몸무게를 입력해주세요">
+                </div>
+                <button type="button">계산하기</button>
+                <p>결과</p>
+            </div>
+        </div>  
+    </div>
+
 </body>
 </html>
