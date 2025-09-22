@@ -54,3 +54,15 @@ $color-point2:#35A8F1;
     font-size:$font-size-19;
     font-weight: $font-weight-semibold;
 }
+@mixin bg {
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+@mixin left_right_arrow_btn{
+    background-color: $color-white;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+    width:48px;height:48px;
+    border-radius: 24px;
+    position: absolute;
+    top: 400px;
+}

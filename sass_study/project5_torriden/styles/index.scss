@@ -27,24 +27,52 @@
             margin: 0 auto ;
             padding: 50px 40px;
             .left_contents {
-                width:860px;
                 @include flex-col;
                 gap: 30px;
                 .overview {
-                    .overview_img{
-                        display: block;
-                        width: 860px; height:860px;
-                        img {@include parcents100;}
+                    width:860px;
+                    position: relative;
+                    overflow: hidden;
+                    .ovview {
+                        @include flex-row;
+                        width:calc(860px * 7);
+                        .overview_img{
+                            display: block;
+                            width: 860px; height:860px;
+                            img {@include parcents100;border-radius:20px;}
+                        }
                     }
-                    .left_arrow_btn {}
-                    .right_arrow_btn {}
+                    .left_arrow_btn {
+                        @include left_right_arrow_btn;
+                        left:-55px;
+                        &:hover{
+
+                        }
+                    }
+                    .right_arrow_btn {
+                        @include left_right_arrow_btn;
+                        right: -55px;
+                    }
                 }
                 .thumnail {
                     @include flex-row;
                     gap:10px; 
                     .thum_img {
+                        position: relative;
                         width:100px;height:100px;
-                        img {@include parcents100;}
+                        img {@include parcents100;border-radius: 10px;}
+                        &::after {
+                            content: '';
+                            bottom: -7px; left:50px;
+                            transform: translate(-50px) scaleX(0) ;
+                            position: absolute;
+                            background-color: $color-black;
+                            content:''; height:2px; width:100px;
+                            transition: transform 0.3s ease;
+                        }
+                        &.active::after {  
+                            transform: translateX(-50px) scaleX(1);
+                        }
                     }
                 }
             }
@@ -83,26 +111,54 @@
                         font-weight: $font-weight-semibold;
                     }
                     .product_capacity {
+                        color:$color-light-gray-lv1;
                         font-size: $font-size-14;
                     }
                 }
                 .product_quantity {
+                    margin-bottom: 30px;
                     >p {font-weight: $font-weight-semibold;padding-bottom: 8px;}
                     .quantity_btn {
                         @include flex-row;
-                        .minus {}
-                        #quantity_num {
-                            width:44px;height:31px
+                        .minus {
+                            padding:10px 11px;
+                            border-radius: 30px 0 0 30px;
+                            background-color: $color-black
                         }
-                        .plus {}
+                        #quantity_num {
+                            padding-left:15px;
+                            width:44px; height:48px;
+                            background-color: $color-black;
+                            color:$color-white;
+                        }
+                        .plus {
+                            border-radius: 0 30px 30px 0;
+                            background-color: $color-black;
+                            padding: 10px 11px;
+                        }
                     }
                 }
                 .product_option {
                     margin-bottom: 10px;
+                    .input_select {
+                            appearance: none; 
+                            transform: translateY(6px);
+                            @include bg;
+                            content: ''; width:24px;height:24px;
+                            background-image: url(../images/radio_button_unchecked.png);
+                            display:inline-block;
+                            margin: right 4px;
+                            &:checked {
+                                background-image:url(../images/radio_button_checked.png)
+                            }
+                    }
+                    .option_input {
+                        transform: translateY(-4px);
+                    }
                     .product_option_header {
                         @include opt_header;
                         @include flex-row; justify-content: space-between;
-                        .product_option {}
+                        .product_option_input {}
                         .price_usd {color:$color-light-gray-lv2;}
                     }
                     .product_option_main {
@@ -113,13 +169,16 @@
                             .subscribe {color:$color-light-gray-lv2;}
                             .price_usd {color:$color-light-gray-lv2;}
                         }
-                        .product_option {
+                        .product_option_input {
                             @include flex-col;
                             gap: 8px;
                         }
                     }
                 }
-                .subscribe_description {margin-bottom: 30px;}
+                .subscribe_description {
+                    margin-bottom: 30px;
+                    a {border-bottom: 1px solid $color-black;}
+                }
                 .cart_wishlist_btn {
                     margin-bottom: 30px;
                     .cart {
@@ -138,44 +197,48 @@
                     }
                 }
                 .product_description_list {
+                    dt {
+                        .desc_btn{
+                            padding:16px 0;
+                            span{@include desc_dt;}
+                        }
+                    }
                     width:100%;
                     .desc_summary {
                         border-top: 1px solid $color-light-gray-lv2;
                         dt {
-                            .desc_btn {
-                                padding:16px;
-                                span{@include desc_dt;}
-                            }
+                            .desc_btn {}
                         }
                         dd {display:none;}
+                        .arrow {transform:translateX(560px) ;}
                     }
                     .desc_benefits {
                         border-top: 1px solid $color-light-gray-lv2;
                         dt {
                             .desc_btn {
-                                padding:16px;
-                                span{@include desc_dt;}
+                                span{}
                             }
                         }
+                        .arrow {transform:translateX(560px) ;}
                     }
                     .desc_ingredients {
                         border-top: 1px solid $color-light-gray-lv2;
                         dt {
                             .desc_btn {
-                                padding:16px;
-                                span{@include desc_dt;}
+                                span{}
                             }
                         }
+                        .arrow {transform:translateX(525px) ;}
                     }
                     .desc_how {
                         border-top: 1px solid $color-light-gray-lv2;
                         border-bottom: 1px solid $color-light-gray-lv2;
                         dt {
                             .desc_btn {
-                                padding:16px;
-                                span{@include desc_dt;}
+                                span{}
                             }
                         }
+                        .arrow {transform:translateX(535px) ;}
                     }
                 }
             }
