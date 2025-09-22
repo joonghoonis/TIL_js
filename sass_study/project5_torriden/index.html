@@ -31,7 +31,15 @@
             <div class="main_view">
                 <div class="left_contents">
                     <div class="overview">
-                        <span class="overview_img"><img src="./images/thum_1.jpg" alt=""></span>
+                        <div class="ovview">
+                            <span class="overview_img"><img src="./images/thum_1.jpg" alt=""></span>
+                            <span class="overview_img"><img src="./images/thum_2.jpg" alt=""></span>
+                            <span class="overview_img"><img src="./images/thum_3.jpg" alt=""></span>
+                            <span class="overview_img"><img src="./images/thum_4.jpg" alt=""></span>
+                            <span class="overview_img"><img src="./images/thum_5.jpg" alt=""></span>
+                            <span class="overview_img"><img src="./images/thum_6.jpg" alt=""></span>
+                            <span class="overview_img"><img src="./images/thum_7.jpg" alt=""></span>
+                        </div>
                         <button type="button" class="left_arrow_btn">
                             <svg width="9" height="16" viewBox="0 0 9 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M7.84645 16L0 8L7.84645 0L9 1.17612L2.3069 8L9 14.8239L7.84645 16Z" fill="#1C1B1F"/>
@@ -44,7 +52,7 @@
                         </button>
                     </div>
                     <div class="thumnail">
-                        <button type="button" class="thum_img"><img src="./images/thum_1.jpg" alt=""></button>
+                        <button type="button" class="thum_img active"><img src="./images/thum_1.jpg" alt="" ></button>
                         <button type="button" class="thum_img"><img src="./images/thum_2.jpg" alt=""></button>
                         <button type="button" class="thum_img"><img src="./images/thum_3.jpg" alt=""></button>
                         <button type="button" class="thum_img"><img src="./images/thum_4.jpg" alt=""></button>
@@ -71,14 +79,14 @@
                         <div class="quantity_btn">
                             <button type="button" class="minus">
                                 <svg width="26" height="27" viewBox="0 0 26 27" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <rect width="26" height="26" transform="translate(0 0.5)" fill="black"/>
+                                    <rect width="26" height="26" transform="translate(0 0.5)""/>
                                     <path d="M7 14.5V12.5H19V14.5H7Z" fill="white"/>
                                     </svg>
                             </button>
-                            <input type="number" name="quantity_num" id="quantity_num">
+                            <input type="number" name="quantity_num" id="quantity_num" value="1">
                             <button type="button" class="plus">
                                 <svg width="26" height="27" viewBox="0 0 26 27" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <rect width="26" height="26" transform="translate(0 0.5)" fill="black"/>
+                                    <rect width="26" height="26" transform="translate(0 0.5)""/>
                                     <path d="M11.8571 14.6429H5V12.3571H11.8571V5.5H14.1429V12.3571H21V14.6429H14.1429V21.5H11.8571V14.6429Z" fill="white"/>
                                     </svg>
                             </button>
@@ -86,8 +94,8 @@
                     </div>
                     <div class="product_option">
                         <div class="product_option_header">
-                            <div class="product_option">
-                                <input type="radio" name="option_select" id="select_main" checked>
+                            <div class="option_input">
+                                <input type="radio" name="option_select" class="input_select"" id="select_main" checked>
                                 <label for="select_main">One-time purchase</label>
                             </div>
                             <p class="price_usd">$25.00 USD</p>
@@ -97,24 +105,24 @@
                                 <p class="subscribe">Subscribe and save</p>
                                 <p class="price_usd">$22.50 USD</p>
                             </div>
-                            <div class="product_option">
-                                <div class="option_select_2">
-                                    <input type="radio" name="option_select" id="select_2" checked>
+                            <div class="product_option_input">
+                                <div class="option_input">
+                                    <input type="radio" name="option_select" class="input_select"" id="select_2" checked>
                                     <label for="select_2">Deliver every month, 10% off</label>
                                 </div>
-                                <div class="option_select_3">
-                                    <input type="radio" name="option_select" id="select_3" checked>
+                                <div class="option_input">
+                                    <input type="radio" name="option_select" class="input_select"" id="select_3" checked>
                                     <label for="select_3">Deliver every 2 months, 7% off</label>
                                 </div>
-                                <div class="option_select_4">
-                                    <input type="radio" name="option_select" id="select_4" checked>
+                                <div class="option_input">
+                                    <input type="radio" name="option_select" class="input_select"" id="select_4" checked>
                                     <label for="select_4">Deliver every 3 months, 5% off</label>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="subscribe_description">
-                        Auto-renews, skip or cancel anytime. View subscription policy
+                        Auto-renews, skip or cancel anytime. <a href="#">View subscription policy</a>
                     </div>
                     <div class="cart_wishlist_btn">
                         <div class="cart">
@@ -133,7 +141,7 @@
                         <dl class="desc_summary">
                             <dt>
                                 <button type="button" class="desc_btn">
-                                    <span>SUMMARY</span><svg width="20" height="12" viewBox="0 0 20 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <span>SUMMARY</span><svg class="arrow" width="20" height="12" viewBox="0 0 20 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M19.6537 2L9.99994 11.6537L0.346191 2L1.76544 0.580748L9.99994 8.8155L18.2344 0.580747L19.6537 2Z" fill="#1C1B1F"/>
                                     </svg>
                                 </button>
@@ -144,7 +152,7 @@
                             <dt>
                                 <button type="button" class="desc_btn">
                                     <span>BENEFITS</span>
-                                    <svg width="20" height="12" viewBox="0 0 20 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <svg class="arrow" width="20" height="12" viewBox="0 0 20 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M19.6537 2L9.99994 11.6537L0.346191 2L1.76544 0.580748L9.99994 8.8155L18.2344 0.580747L19.6537 2Z" fill="#1C1B1F"/>
                                     </svg>
                                 </button>
@@ -155,7 +163,7 @@
                             <dt>
                                 <button type="button" class="desc_btn">
                                     <span>INGREDIENTS</span>
-                                    <svg width="20" height="12" viewBox="0 0 20 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <svg class="arrow" width="20" height="12" viewBox="0 0 20 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M19.6537 2L9.99994 11.6537L0.346191 2L1.76544 0.580748L9.99994 8.8155L18.2344 0.580747L19.6537 2Z" fill="#1C1B1F"/>
                                     </svg>
                                 </button>
@@ -166,7 +174,7 @@
                             <dt>
                                 <button type="button" class="desc_btn">
                                     <span>HOW TO USE</span>
-                                    <svg width="20" height="12" viewBox="0 0 20 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <svg class="arrow" width="20" height="12" viewBox="0 0 20 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M19.6537 2L9.99994 11.6537L0.346191 2L1.76544 0.580748L9.99994 8.8155L18.2344 0.580747L19.6537 2Z" fill="#1C1B1F"/>
                                     </svg>
                                 </button>
