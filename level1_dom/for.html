@@ -6,8 +6,26 @@
     <title>Document</title>
     <link rel="stylesheet" href="./styles/reset.css">
     <script src="./scripts/for.js" defer></script>
+    <style>
+        .dan99 {display:flex;flex-flow:column wrap;
+            height:300px; padding:10px;
+        }
+        .dan99 li {line-height: 30px;}
+        .dan2 li.size {width:80px; height:20px}
+        .dan2 li.color_odd {background:yellow; color:blue} 
+        .dan2 li.color_even {background:blue; color:yellow} 
+    </style>
 </head>
 <body>
-    
+    <div class="menu">
+        <a href="#">menu1</a>
+        <a href="#">menu2</a>
+        <a href="#">menu3</a>
+        <a href="#">menu4</a>
+    </div>
+    <ul class="dan2">
+        <!-- (innerHTML)li*9 -->
+    </ul>
+    <ul class="dan99"></ul>
 </body>
 </html>

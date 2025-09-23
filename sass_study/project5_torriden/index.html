@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>DIVE IN Cleansing Oil - Torriden</title>
     <link rel="shortcut icon" href="./images/logo_favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="./styles/reset.css">
     <link rel="stylesheet" href="./styles/main.css">
@@ -13,7 +13,7 @@
     <div id="wrap">
         <header>
             <div class="logo">
-                <a href="#"><img src="./images/Logo.png" alt=""></a>
+                <a href="#"><img src="./images/Logo.png" lt=""></a>
             </div>
             <nav>
                 <ul>
@@ -41,12 +41,12 @@
                             <span class="overview_img"><img src="./images/thum_7.jpg" alt=""></span>
                         </div>
                         <button type="button" class="left_arrow_btn">
-                            <svg width="9" height="16" viewBox="0 0 9 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <svg class="left_arrow" width="9" height="16" viewBox="0 0 9 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M7.84645 16L0 8L7.84645 0L9 1.17612L2.3069 8L9 14.8239L7.84645 16Z" fill="#1C1B1F"/>
                                 </svg>                                
                         </button>
                         <button type="button" class="right_arrow_btn">
-                            <svg width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <svg class="right_arrow" width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M1.65355 -1.57593e-07L9.5 8L1.65355 16L0.499999 14.8239L7.19311 8L0.5 1.17612L1.65355 -1.57593e-07Z" fill="#1C1B1F"/>
                                 </svg>
                         </button>
@@ -95,7 +95,7 @@
                     <div class="product_option">
                         <div class="product_option_header">
                             <div class="option_input">
-                                <input type="radio" name="option_select" class="input_select"" id="select_main" checked>
+                                <input type="radio" name="option_select" class="input_select" id="select_main" checked>
                                 <label for="select_main">One-time purchase</label>
                             </div>
                             <p class="price_usd">$25.00 USD</p>
@@ -103,19 +103,19 @@
                         <div class="product_option_main">
                             <div class="sub_price">
                                 <p class="subscribe">Subscribe and save</p>
-                                <p class="price_usd">$22.50 USD</p>
+                                <p class="price_usd">$<span class="opt_selc_price">22.50</span> USD</p>
                             </div>
                             <div class="product_option_input">
                                 <div class="option_input">
-                                    <input type="radio" name="option_select" class="input_select"" id="select_2" checked>
+                                    <input type="radio" name="option_select" class="input_select"" id="select_2">
                                     <label for="select_2">Deliver every month, 10% off</label>
                                 </div>
                                 <div class="option_input">
-                                    <input type="radio" name="option_select" class="input_select"" id="select_3" checked>
+                                    <input type="radio" name="option_select" class="input_select"" id="select_3">
                                     <label for="select_3">Deliver every 2 months, 7% off</label>
                                 </div>
                                 <div class="option_input">
-                                    <input type="radio" name="option_select" class="input_select"" id="select_4" checked>
+                                    <input type="radio" name="option_select" class="input_select"" id="select_4">
                                     <label for="select_4">Deliver every 3 months, 5% off</label>
                                 </div>
                             </div>
@@ -126,14 +126,22 @@
                     </div>
                     <div class="cart_wishlist_btn">
                         <div class="cart">
-                            <button type="button" class="cart_btn">Add to cart</button>
+                            <button type="button" class="cart_btn">
+                                <span class="cart_text">Add to cart</span>
+                            </button>
                         </div>
                         <div class="wishlist">
                             <button type="button" class="wishlist_btn">
-                                <svg width="19" height="16" viewBox="0 0 19 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M9.50005 15.75L8.95005 15.25C7.33338 13.7667 5.99588 12.5 4.93755 11.45C3.87922 10.4 3.04588 9.47918 2.43755 8.68751C1.82922 7.89585 1.40422 7.18335 1.16255 6.55001C0.920882 5.91668 0.800049 5.28335 0.800049 4.65001C0.800049 3.46668 1.20422 2.47085 2.01255 1.66251C2.82088 0.854179 3.81672 0.450012 5.00005 0.450012C5.88338 0.450012 6.70838 0.687512 7.47505 1.16251C8.24172 1.63751 8.91672 2.33335 9.50005 3.25001C10.0834 2.33335 10.7584 1.63751 11.525 1.16251C12.2917 0.687512 13.1167 0.450012 14 0.450012C15.1834 0.450012 16.1792 0.854179 16.9875 1.66251C17.7959 2.47085 18.2 3.46668 18.2 4.65001C18.2 5.28335 18.0792 5.91668 17.8375 6.55001C17.5959 7.18335 17.1709 7.89585 16.5625 8.68751C15.9542 9.47918 15.125 10.4 14.075 11.45C13.025 12.5 11.6834 13.7667 10.05 15.25L9.50005 15.75ZM9.50005 14.8C11.1 13.35 12.4167 12.1083 13.45 11.075C14.4834 10.0417 15.3 9.14585 15.9 8.38751C16.5 7.62918 16.9167 6.95835 17.15 6.37501C17.3834 5.79168 17.5 5.21668 17.5 4.65001C17.5 3.65001 17.1667 2.81668 16.5 2.15001C15.8334 1.48335 15 1.15001 14 1.15001C13.2 1.15001 12.4625 1.37918 11.7875 1.83751C11.1125 2.29585 10.4667 3.01668 9.85005 4.00001H9.15005C8.51672 3.00001 7.86672 2.27501 7.20005 1.82501C6.53338 1.37501 5.80005 1.15001 5.00005 1.15001C4.01672 1.15001 3.18755 1.48335 2.51255 2.15001C1.83755 2.81668 1.50005 3.65001 1.50005 4.65001C1.50005 5.21668 1.61672 5.79168 1.85005 6.37501C2.08338 6.95835 2.50005 7.62918 3.10005 8.38751C3.70005 9.14585 4.51672 10.0375 5.55005 11.0625C6.58338 12.0875 7.90005 13.3333 9.50005 14.8Z" fill="#1C1B1F"/>
-                                </svg>
-                                Add to Wishlist
+                                <svg class="wish_heart"width="25" height="25" viewBox="0 0 25 25"  xmlns="http://www.w3.org/2000/svg">
+                                    <mask id="mask0_42_7" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="25" height="25">
+                                    <rect x="0.5" y="0.5" width="24" height="24" />
+                                    </mask>
+                                    <g mask="url(#mask0_42_7)">
+                                    <path d="M12.5 19.75L11.95 19.25C10.3334 17.7667 8.99588 16.5 7.93755 15.45C6.87922 14.4 6.04588 13.4792 5.43755 12.6875C4.82922 11.8958 4.40422 11.1833 4.16255 10.55C3.92088 9.91668 3.80005 9.28335 3.80005 8.65001C3.80005 7.46668 4.20422 6.47085 5.01255 5.66251C5.82088 4.85418 6.81672 4.45001 8.00005 4.45001C8.88338 4.45001 9.70838 4.68751 10.475 5.16251C11.2417 5.63751 11.9167 6.33335 12.5 7.25001C13.0834 6.33335 13.7584 5.63751 14.525 5.16251C15.2917 4.68751 16.1167 4.45001 17 4.45001C18.1834 4.45001 19.1792 4.85418 19.9875 5.66251C20.7959 6.47085 21.2 7.46668 21.2 8.65001C21.2 9.28335 21.0792 9.91668 20.8375 10.55C20.5959 11.1833 20.1709 11.8958 19.5625 12.6875C18.9542 13.4792 18.125 14.4 17.075 15.45C16.025 16.5 14.6834 17.7667 13.05 19.25L12.5 19.75Z"/>
+                                    </g>
+                                    </svg>
+                                    
+                                <span class="wish_text">Add to Wishlist</span>
                             </button>
                         </div>
                     </div>
@@ -157,7 +165,26 @@
                                     </svg>
                                 </button>
                             </dt>
-                            <dd></dd>
+                            <dd>Key Features:
+                                ✔ Hydration: Leaves skin feeling deeply hydrated and refreshed after cleansing
+                                ✔ Pore-Deep Cleansing: Effectively removes makeup and clears pores with low‑molecular‑weight oil
+                                ✔ Sebum Care: Melts away hardened sebum and buildup inside pores with gentle oil cleansing
+                                ✔ Gentle Formula: Suitable even for sensitive skin
+                                ✔ Texture: Light water-oil texture with a smooth glide and easy rinse-off, leaving no residue
+                                
+                                Clinical Results:
+                                * The human repeat insult patch test(Non-irritant)(7)
+                                * Skin Irritation Test for sensitive skin(Non-irritant)(1)
+                                * 99.12% improved Cleansing ability to remove sunscreen and waterproof makeup(2)
+                                * 99.00% improved Cleansing ability to remove impurities in pores(3)
+                                * 29.25% improved of pore area (4)
+                                * 92.60% improved of moisture content (5)
+                                * 100% agreed feels rolling sensation/cleansing ability/moisture/without leaving a slippery residue on the skin.(6)
+                                
+                                (7) Based on a 6-weeks clinical study on 50 people ages 20-60
+                                (1) Based on 3-days clinical study on 30 people ages 20-59
+                                (2)(3)(4)(5) In clinical testing on 20 participants, average results after 1 cleanse showed
+                                (6) In the self-assessment survey portion of a clinical study(2)(3)(4)(5) on 20 participants (ages 20 to 59). Immediately after use.</dd>
                         </dl>
                         <dl class="desc_ingredients">
                             <dt>
