@@ -147,16 +147,17 @@
                     >p {font-weight: $font-weight-semibold;padding-bottom: 8px;}
                     .quantity_btn {
                         @include flex-row;
+                        width:max-content;
                         .minus {
                             padding:10px 11px;
                             border-radius: 30px 0 0 30px;
                             background-color: $color-black
                         }
                         #quantity_num {
-                            padding-left:15px;
+                            padding:0 5px;
                             width:44px; height:48px;
                             background-color: $color-black;
-                            color:$color-white;
+                            color:$color-white;text-align: center;
                         }
                         .plus {
                             border-radius: 0 30px 30px 0;
@@ -218,9 +219,10 @@
                     }
                     .wishlist {
                         .wishlist_btn{
+                            @include flex-row; @include flex-center;
                             @include cart_wish_btn;
                             background-color: $color-white;
-                            .wish_heart path{
+                            .wish_heart path {
                                 fill: none;
                                 stroke:$color-black;
                             }
@@ -240,16 +242,32 @@
                             padding:16px 0;
                             width:100%;
                             position: relative;
-                            &:hover span::after{
+                            span::after{
                                 background:#0000001a ;
                                 position: absolute;
                                 content: ''; display: inline-block;
-                                width:28px;height:28px;
+                                width:30px;height:30px;
                                 right:10px;top:50%;
-                                transform: translateY(-50%);
+                                transform: translateY(-50%) scale(0);
                                 border-radius: 14px; 
+                                transition : transform 0.2s;
+                            }
+                            &:hover span::after{
+                                transform:translateY(-50%)scale(1);
+                                transition : transform 0.2s;
                             }
                             span{@include desc_dt;}
+                            .arrow{position: absolute; right:15px;top:50%;transform: translateY(-50%);}
+                        }
+                    }
+                    dd {
+                        display: none;
+                        opacity: 0;
+                        &.active {
+                            display: block;
+                            opacity: 1;
+                            line-height: 150%;
+                            padding-bottom: 24px;
                         }
                     }
                     width:100%;
@@ -258,8 +276,9 @@
                         dt {
                             .desc_btn {}
                         }
-                        dd {display:none;}
-                        .arrow {transform:translateX(560px) ;}
+                        dd{ 
+                        }
+                        .arrow {}
                     }
                     .desc_benefits {
                         border-top: 1px solid $color-light-gray-lv2;
@@ -268,7 +287,7 @@
                                 span{}
                             }
                         }
-                        .arrow {transform:translateX(560px) ;}
+                        .arrow {}
                     }
                     .desc_ingredients {
                         border-top: 1px solid $color-light-gray-lv2;
@@ -277,7 +296,7 @@
                                 span{}
                             }
                         }
-                        .arrow {transform:translateX(525px) ;}
+                        .arrow {}
                     }
                     .desc_how {
                         border-top: 1px solid $color-light-gray-lv2;
@@ -287,7 +306,7 @@
                                 span{}
                             }
                         }
-                        .arrow {transform:translateX(535px) ;}
+                        .arrow {}
                     }
                 }
             }
