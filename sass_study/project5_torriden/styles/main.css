@@ -61,6 +61,31 @@
   top: 400px;
   left: -55px;
 }
+#wrap main .main_view .left_contents .overview .left_arrow_btn:hover .left_arrow {
+  transform: translateX(-4px);
+  transition: transform 0.2s;
+}
+#wrap main .main_view .left_contents .overview .left_arrow_btn .left_arrow {
+  transition: transform 0.2s;
+}
+#wrap main .main_view .left_contents .overview .left_arrow_btn::after {
+  transform: scaleX(0);
+  transition: transform 0.2s ease;
+  background-color: #000;
+  content: "";
+  width: 17px;
+  height: 2px;
+  display: block;
+  position: absolute;
+  left: 20px;
+  top: 23px;
+  transform-origin: left;
+}
+#wrap main .main_view .left_contents .overview .left_arrow_btn:hover::after {
+  left: 18px;
+  transform: scaleX(1);
+  transition: transform 0.2s;
+}
 #wrap main .main_view .left_contents .overview .right_arrow_btn {
   background-color: #fff;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
@@ -70,6 +95,31 @@
   position: absolute;
   top: 400px;
   right: -55px;
+}
+#wrap main .main_view .left_contents .overview .right_arrow_btn:hover .right_arrow {
+  transform: translateX(4px);
+  transition: transform 0.2s;
+}
+#wrap main .main_view .left_contents .overview .right_arrow_btn .right_arrow {
+  transition: transform 0.2s;
+}
+#wrap main .main_view .left_contents .overview .right_arrow_btn::after {
+  transform: scaleX(0);
+  transition: transform 0.2s ease;
+  background-color: #000;
+  content: "";
+  width: 17px;
+  height: 2px;
+  display: block;
+  position: absolute;
+  right: 19px;
+  top: 23px;
+  transform-origin: right;
+}
+#wrap main .main_view .left_contents .overview .right_arrow_btn:hover::after {
+  right: 18px;
+  transform: scaleX(1);
+  transition: transform 0.2s;
 }
 #wrap main .main_view .left_contents .thumnail {
   display: flex;
@@ -258,8 +308,31 @@
   width: 100%;
   background-color: #fff;
 }
+#wrap main .main_view .right_contents .cart_wishlist_btn .wishlist .wishlist_btn .wish_heart path {
+  fill: none;
+  stroke: #000;
+}
+#wrap main .main_view .right_contents .cart_wishlist_btn .wishlist .wishlist_btn.active .wish_heart path {
+  fill: #000;
+  stroke: #000;
+}
 #wrap main .main_view .right_contents .product_description_list dt .desc_btn {
+  display: flex;
   padding: 16px 0;
+  width: 100%;
+  position: relative;
+}
+#wrap main .main_view .right_contents .product_description_list dt .desc_btn:hover span::after {
+  background: rgba(0, 0, 0, 0.1019607843);
+  position: absolute;
+  content: "";
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 14px;
 }
 #wrap main .main_view .right_contents .product_description_list dt .desc_btn span {
   font-size: 1.188rem;

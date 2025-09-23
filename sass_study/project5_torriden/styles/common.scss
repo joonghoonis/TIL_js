@@ -66,3 +66,12 @@ $color-point2:#35A8F1;
     position: absolute;
     top: 400px;
 }
+
+@mixin arrow_after {
+    transform:scaleX(0);
+    transition: transform 0.2s ease;
+    background-color: $color-black;
+    content:''; width:17px; height:2px;
+    display:block;
+    position: absolute;
+}

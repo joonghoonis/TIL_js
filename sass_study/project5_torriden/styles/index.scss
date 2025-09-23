@@ -45,13 +45,40 @@
                     .left_arrow_btn {
                         @include left_right_arrow_btn;
                         left:-55px;
-                        &:hover{
-
+                        &:hover .left_arrow{
+                            transform: translateX(-4px);
+                            transition: transform 0.2s;
+                        }
+                        .left_arrow{transition: transform 0.2s;}
+                        &::after {
+                            @include arrow_after;
+                            left:20px; top:23px;
+                            transform-origin:left;
+                        }
+                        &:hover::after {
+                                left:18px;
+                                transform :scaleX(1);
+                                transition: transform 0.2s;
                         }
                     }
                     .right_arrow_btn {
                         @include left_right_arrow_btn;
                         right: -55px;
+                        &:hover .right_arrow{
+                            transform: translateX(4px);
+                            transition: transform 0.2s;
+                        }
+                        .right_arrow{transition: transform 0.2s;}
+                        &::after {
+                            @include arrow_after;
+                            right:19px; top:23px;
+                            transform-origin:right;
+                        }
+                        &:hover::after {
+                                right:18px;
+                                transform :scaleX(1);
+                                transition: transform 0.2s;
+                        }
                     }
                 }
                 .thumnail {
@@ -193,13 +220,35 @@
                         .wishlist_btn{
                             @include cart_wish_btn;
                             background-color: $color-white;
+                            .wish_heart path{
+                                fill: none;
+                                stroke:$color-black;
+                            }
+                            &.active {
+                                .wish_heart path {
+                                    fill: $color-black;
+                                    stroke: $color-black;
+                                }
+                            }
                         }
                     }
                 }
                 .product_description_list {
                     dt {
                         .desc_btn{
+                            display:flex;
                             padding:16px 0;
+                            width:100%;
+                            position: relative;
+                            &:hover span::after{
+                                background:#0000001a ;
+                                position: absolute;
+                                content: ''; display: inline-block;
+                                width:28px;height:28px;
+                                right:10px;top:50%;
+                                transform: translateY(-50%);
+                                border-radius: 14px; 
+                            }
                             span{@include desc_dt;}
                         }
                     }
