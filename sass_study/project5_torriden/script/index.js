@@ -52,7 +52,7 @@ function thumChangeImgFunc(borderNum){
 }
 
 const slidecount = ovview.children.length;
-let currentIndex = 0햣;
+let currentIndex = 0;
 ovview.style.transition = 'transform 0.8s'
 
 // right 버튼 left 버튼 누르면 슬라이드 되면서 넘어가기
