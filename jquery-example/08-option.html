@@ -28,7 +28,27 @@
         <p class="select">선택옵션 : <span></span><button type="button" class="close">x</button></p>
     </div>
     <script>
-        
+        //1. 선택옵션 초기 숨기기
+        //2. select 옵션 선택 시
+        //3. 선택옵션 목록 출력하기
+        //4. 선택옵션 오른쪽 x 클릭 시 선택옵션 제거
+        const $selectOpt = $('select#color')
+        const $selectOrder = $('p.select')
+        const $orderClose = $('.close')
+        // js ver
+        //selectOpt.addEventListener('change',()=>{a()})
+        //function a() {selectOpt.options(selectedIndex)}
+        $selectOrder.slideUp()
+        // jq ver
+        $selectOpt.change(function(){
+            console.log($(this).find('option:checked'))
+            $selectOrder.slideDown()
+            let thisVal = $(this).find('option:checked').val()
+            $selectOrder.find('span').text(thisVal)
+        })
+        //js ver
+        //selectOrder.children[0].textContent = thisVal;
+        $orderClose.click(function(){$(this).parent().slideUp(); })
     </script>
 </body>
 </html>
