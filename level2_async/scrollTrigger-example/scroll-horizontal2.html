@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>패션 포스터 | 가로 스크롤 트리거 활용</title>
+    <link rel="stylesheet" href="../styles/reset.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
+    <style>
+        .box {
+            margin: 0 550px ;
+            height: 100vh; width: 100%;
+        }
+        .box img {
+            width: 100%;
+        }
+        .box .view { 
+            height:100vh; width: 550px; position: relative; text-align: center;
+        }
+        .box h1 {
+            margin: 0;
+            position: absolute;
+            animation: main_text 1s both; top: 0; left: 70px;
+            color: #fff; font-size:8rem;
+        }
+        .box p {position: absolute;
+            font-size: 4rem; font-weight: 700;color: #fff; margin: 0;
+        }
+        .box .view p:nth-of-type(1) { 
+            animation: main_text 1.3s 0.3s  both; left: 40px; bottom:200px;}
+        .box .view p:nth-of-type(2) { 
+            animation: main_text 1.3s 0.6s  both; left: 50px; bottom: 130px; top:auto}
+        .wrap {height: 100vh;}
+        .wrap .container {height: 100vh;width:calc(850px * 4);display: flex;}
+        .wrap .container  {}
+        .wrap .container  a {width:850px ;height:1300px}
+        .wrap .container a img {width: 100%;height: 100%;}
+        @keyframes main_text {
+            0% {opacity:0;transform:translateY(70px)scale(1.3);}
+            100% {opacity:1;transform: translateY(0)scale(1);}
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <section class="box">
+            <div class="view">
+                <img src="https://i.pinimg.com/736x/bb/45/10/bb45106708db8a4d61154dda74c6834c.jpg" alt="">
+                <h1>VOGUE</h1>
+                <p>BTS</p>
+                <p>V</p>
+            </div>
+        </section>
+        <section class="wrap">
+            <div class="container">
+                <a href="#"><img src="https://i.pinimg.com/1200x/b4/03/cc/b403cc1f29aab8529c9938a2a2f3ea94.jpg" alt=""></a>
+                <a href="#"><img src="https://i.pinimg.com/736x/14/fd/92/14fd92d5b7969c934a52e28522c573df.jpg" alt=""></a>
+                <a href="#"><img src="https://i.pinimg.com/1200x/61/6b/88/616b88cfb8879103bc55bf36119a874f.jpg" alt=""></a>
+                <a href="#"><img src="https://i.pinimg.com/736x/dd/16/24/dd16246eb3e0b34820b8908652272b96.jpg" alt=""></a>
+            </div>
+        </section>
+        <section class="wrap">
+            <div class="container">
+                <a href="#"><img src="https://i.pinimg.com/736x/49/d1/6f/49d16faee41a2b99901fca62dc41fcbd.jpg" alt=""></a>
+                <a href="#"><img src="https://i.pinimg.com/736x/60/b1/a8/60b1a8e6ae440ddf0cd39ab014b4f0d7.jpg" alt=""></a>
+                <a href="#"><img src="https://i.pinimg.com/736x/fd/47/cf/fd47cfa9f695c42f6a385a1209ebd702.jpg" alt=""></a>
+                <a href="#"><img src="https://i.pinimg.com/1200x/67/e1/7f/67e17f9ab51170f1804c24c7a48edad6.jpg" alt=""></a>
+            </div>
+        </section>
+        <section class="wrap">
+            <div class="container"></div>
+        </section>
+    </main>
+    <script>
+        gsap.registerPlugin(ScrollTrigger)
+        const container = document.querySelector('.container')
+        const scrollW = container.offsetWidth - window.innerWidth
+        console.log(container.offsetWidth, scrollW)
+        gsap.utils.toArray('.wrap').forEach((obj)=>{
+            console.log(obj)
+            const vogue = gsap.timeline({
+                scrollTrigger:{
+                    trigger:obj,
+                    start:'center center',
+                    end:()=>"+="+ scrollW,
+                    scrub:true,
+                    pin:true,
+                    anticipatePin:1,
+                },defaults:{ease:'none'}
+            })
+            vogue.fromTo(obj.querySelector('.container'),{
+                x:0
+            },{
+                x:-scrollW
+            })
+        })
+    </script>
+</body>
+</html>

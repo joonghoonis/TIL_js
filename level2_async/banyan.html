@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반얀트리 해운대 부산</title>
+    <link rel="stylesheet" href="./styles/reset.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
+</head>
+<style>
+    body {width: 100%;}
+    .popup {
+        position: fixed; bottom: 20px; right: 50px;
+        border: 2px solid #fff; border-radius: 10px;
+        padding:10px 20px; z-index: 100;
+    }
+    .popup a {color: #fff;}
+    header { z-index:999;
+        display: flex; flex-flow: row nowrap;
+        justify-content: space-between; align-items: center;
+        padding:0 50px ; height: 100px; position: fixed; width: 100%;
+        top: 0;
+    }
+    header h1 {}
+    header h1 a {}
+    header h1 a img{width: 100%;}
+    header nav {}
+    header nav a { color: #fff;}
+    main {}
+    main .bg {
+        width:100% ;height :100vh}
+    main .bg h1 {
+        color: #fff; font-size: 3rem; 
+        font-weight: 700;
+    } 
+    main .bg p {color: #eeeeee;line-height: 1.8;} 
+    main .bg .text {}
+    main .bg1 {
+        animation: bg_ani 2s both;
+        background: url(./banyanTree_images/main_bg_new2.jpg) no-repeat  center / cover;}
+    main .bg1 .text {}
+    main .bg1 .text h1 {
+        animation: h1_ani 3s both;
+        text-align: center; 
+        line-height: 100vh;
+    }
+    main .bg2 {background: url(./banyanTree_images/main_con2_bg.jpg) no-repeat  center / cover;opacity: 0;transition: all 1s;}    
+    main .bg2 .text {
+        padding: 100px;
+    }
+    main .bg2 .text h1 {margin-bottom: 20px;}
+    main .bg2 .text p {}
+    main .bg3 {background: url(./banyanTree_images/main_con3_bg.jpg) no-repeat  center / cover;}
+    main .bg3 .text {padding:100px}
+    main .bg3 .text h1 {margin-bottom:20px}
+    main .bg3 .text p {}
+    main .bg4 {background: url(./banyanTree_images/main_con5_bg-.jpg) no-repeat  center / cover;}
+    main .bg4 .text {padding:100px}
+    main .bg4 .text h1{margin-bottom: 20px;}
+    main .bg4 .text p{}
+    footer {
+        height: 150px;width: 100%; background-color: #000;
+        display: flex; flex-flow: row nowrap;
+        justify-content: space-around;align-items: center;
+    }
+    footer .copy {color: #AAA;}
+    footer .logo {}
+    .bg_opacity {opacity:1 !important}
+    @keyframes h1_ani {
+        0% {opacity: 0; scale: 1.5;}
+        100% {opacity: 1; scale: 1;}
+    }
+    @keyframes bg_ani {
+        0% {background-size:150%;}
+        100% {background-size: 130%;}
+    }
+</style>
+<body>
+    <div class="popup">
+        <a href="#">이너스 멤버 상담 예약</a>
+    </div>
+    <header>
+        <h1><a href="#"><img src="./banyanTree_images/logo_w.png" alt=""></a></h1>
+        <nav><a href="#">MENU</a></nav>
+    </header>
+    <main>
+        <div class="bg bg1">
+            <div class="text">
+                <h1>BANYAN TREE HAEUNDAE BUSAN</h1>
+            </div>
+        </div>
+        <div class="bg bg2">
+            <div class="text">
+                <h1>THE BEST SANCTUARY FOR THE SENSES</h1>
+                <p>최상의 모든 조건, 반얀트리를 빛내는 브랜드 컬렉션, 그 중에서도 반약트리(Banyan Tree)는<br>
+                    명실상부한 럭셔리 호스피탈리티의 최상급 브랜드입니다.<br>
+                    전세계의 가장 아름답고 장엄한 자연 속에서 누리는 지역 고유의 경험.<br>
+                    최고의 휴양을 선사하는 반얀트리를 만나보십시오.</p>
+            </div>
+        </div>
+        <div class="bg bg3">
+            <div class="text">
+                <h1>BANYAN TREE HAEUNDAE</h1>
+                <p>부산의 아름다운 오시리아, 그 곳 해변과 한 걸음. <br>
+                    귀하께 2025년 반얀트리 해운대 부산의 탄생 소식을 전합니다. <br>
+                    세계 곳곳에서 경험하던 반약트리의 휴식, 그 이상을 이제, 부산에서도 만나실 수 있습니다.</p>
+            </div>
+        </div>
+        <div class="bg bg4">
+            <div class="text">
+                <h1>A HOME IN THE PERFECT WORLD</h1>
+                <p>반얀트리는 22개 국가에 48개의 호텔과 리조트, 64개의 스파, 골프 코스 및 레지던스를 운영하는 글로벌 기업입니다. <br>
+                    완벽한 안식처를 향한 멈추지 않는 반얀트리의 노력그것은 이미, 국제적 권위를 가진 2700여 개 이상의 <br> 
+                    수상 경력이 증명하고 있습니다. 반얀트리 해운대 부산과 함께 세계 곳곳 이름 난 비경 속의 반얀트리를 만나십시오. <br>
+                    지상 최고의 휴식을 선사하겠습니다.</p>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p class="logo"><img src="./banyanTree_images/logo_w.png" alt=""></p>
+        <p class="copy">copyright © 2022 banyan tree haendaevusan. all rights reserved.</p>
+    </footer>
+    <script>
+        gsap.registerPlugin(ScrollTrigger)
+        setTimeout(function(){window.scrollTo(0,0)},0)
+        const bgs = ['.bg2','.bg3','.bg4' ]
+        bgs.forEach((bgsel)=>{
+            console.log(bgsel)
+            gsap.fromTo(bgsel,
+                {opacity:0},
+                {opacity:1,duration:1.5,scrollTrigger:scrollTriggerFunc(bgsel)}
+            )
+            gsap.fromTo(`${bgsel} h1`,
+                {opacity:0,y:100},
+                {opacity:1,y:0,delay:0.2,duration:1.2,scrollTrigger:scrollTriggerFunc(bgsel)}
+            )
+            gsap.fromTo(`${bgsel} p`,
+                {opacity:0,y:100},
+                {opacity:1, y:0,delay:0.7,duration:1.2,scrollTrigger:scrollTriggerFunc(bgsel)}
+            )
+            /* ScrollTrigger.create({
+                trigger:bgsel,
+                strat:'top center',
+                onEnter:()=>bgsel.classList.add('bg_opacity')
+            }) */
+        })
+        function scrollTriggerFunc(target) {
+            return{
+            trigger:target,
+            start: 'top 90%',
+        }}
+    </script>
+</body>
+</html>

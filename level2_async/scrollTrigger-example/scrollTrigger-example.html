@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
+    <style>
+        body{
+            background:linear-gradient(red,orange,yellow,palegreen,blue);
+        }
+        body, .box{
+            height:100vh
+        }
+        body .box h1{
+            font-size : 2.5rem;
+        }
+        body .box:nth-child(2) h1{
+            opacity: 0;;
+        }
+        body .box2 {
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <div >
+        <div class="box box1">
+            <h1>1
+        </h1>
+    </div>
+    <div class="box box1 animate-box">
+        <h1 class="title animate-title">2</h1>
+        <p class="contents">2-2</p>
+    </div>
+    <div class="box box3 animate-box">
+        <h1 class="title animate-title">3</h1>
+        <ul>
+            <li class="contents">3-2</li>
+        </ul>
+    </div>
+    <div class="box box4">
+        <h1 class="title">4</h1>
+    </div>
+    </div>
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+
+        const animateBox = document.querySelectorAll('.animate-box');
+        const title = document.querySelectorAll('.animate-title'); // 예시
+        const content = document.querySelectorAll('.contents');   // 예시
+
+        animateBox.forEach((object, index) => {
+            // 첫 번째 애니메이션
+            gsap.fromTo(object, {
+                opacity: 0, y: 50
+            }, {
+                opacity: 1, y: 0,
+                duration: 1,
+                scrollTrigger: {
+                    trigger: object,
+                    start: 'top center',
+                    markers: true,
+                }
+            });
+
+            // 두 번째 애니메이션
+            gsap.fromTo(content[index], {
+                opacity: 0, x: 100
+            }, {
+                opacity: 1, x: 0,
+                duration: 1,
+                delay: 0.3,
+                scrollTrigger: {
+                    trigger: object,
+                    start: 'top center',
+                    markers: true,
+                }
+            });
+        });
+</script>
+
+    </script>
+</body>
+</html>
